@@ -1,0 +1,153 @@
+.weather {
+    place-self: center;
+    padding: 40px;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, #2f4680, #500aef);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+}
+
+.search-bar input {
+    height: 40px;
+    width: 70%;
+    padding-left: 15px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    color: #626262;
+    background: #ebfffc;
+    font-size: 16px;
+}
+
+.search-bar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ebfffc;
+    cursor: pointer;
+}
+
+/* Weather Icon */
+.weather-icon {
+    width: 100px;
+    margin: 30px 0;
+}
+
+/* Temperature & Location */
+.temperature {
+    font-size: 50px;
+    color: #fff;
+    line-height: 1;
+}
+
+.location {
+    font-size: 30px;
+    color: #fff;
+}
+
+/* Weather Data */
+.weather-data {
+    width: 100%;
+    margin-top: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Keep items aligned */
+    flex-wrap: nowrap;  /* Ensure side-by-side layout */
+    gap: 20px;  /* Adds space between columns */
+}
+
+/* Weather Data Columns */
+.weather-data .col {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    justify-content: center;
+    flex: 1; /* Makes both columns equal width */
+}
+
+.weather-data .col span {
+    font-size: 16px;
+    display: block;
+}
+
+.weather-data .col img {
+    width: 26px;
+    margin-top: 10px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .weather {
+        padding: 30px;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .search-bar input {
+        width: 80%;
+    }
+
+    .temperature {
+        font-size: 40px;
+    }
+
+    .location {
+        font-size: 25px;
+    }
+
+    /* ✅ Keeps wind & humidity side by side */
+    .weather-data {
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .weather-data .col {
+        font-size: 18px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .weather {
+        padding: 20px;
+        max-width: 300px;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+    }
+
+    .temperature {
+        font-size: 35px;
+    }
+
+    .location {
+        font-size: 22px;
+    }
+
+    /* ✅ Ensures side-by-side on small screens */
+    .weather-data {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .weather-data .col {
+        font-size: 16px;
+    }
+}
